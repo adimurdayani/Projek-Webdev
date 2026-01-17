@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development</title>
+
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Web Development</h1>
+      <p>Belajar HTML & CSS dengan tampilan modern</p>
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo" />
+          <span>WebDev</span>
+        </div>
+
+        <!-- Menu -->
+        <ul class="nav-menu">
+          <li><a href="#" class="active">Beranda</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Artikel</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div>
+        <section>
+          <h4>Section</h4>
+          <p id="section-teks"></p>
+        </section>
+
+        <article>
+          <h4>Artikel</h4>
+          <div class="grid-berita" id="berita">
+
+          </div>
+        </article>
+      </div>
+
+      <aside>
+        <h4>Sidebar</h4>
+        <p>
+          Sidebar cocok untuk menu tambahan, informasi singkat, atau widget.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <h4>© 2025 - Web Development</h4>
+    </footer>
+
+    <script src="/js/berita.js"></script>
+    <script>
+      const data = [
+        "Pemerintahan",
+        "Pembangunan",
+        "Keuangan",
+        "Keuangan Daerah",
+      ];
+
+      let getData = "";
+
+      for (let i = 0; i < data.length; i++) {
+        getData += data[i] + "<br>";
+        console.log(getData);
+      }
+
+      document.getElementById("section-teks").innerHTML = getData;
+    </script>
+  </body>
+</html>
